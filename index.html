@@ -1,0 +1,71 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-image: url("https://cdn.pixabay.com/photo/2016/08/05/07/17/laptop-1571702_1280.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+  <title>Custom Tax Calculator</title>
+</head>
+
+<body>
+  <header>
+    <img src="https://i.ibb.co/1ms90cR/calc-removebg-preview.png" alt="Calculator Logo">
+  </header>
+
+  <main>
+    <div class="calculator">
+      <input type="text" id="result" value="0" disabled>
+      <div class="row">
+        <button onclick="appendValue(7)">7</button>
+        <button onclick="appendValue(8)">8</button>
+        <button onclick="appendValue(9)">9</button>
+        <button onclick="appendValue('/')">/</button>
+      </div>
+      <div class="row">
+        <button onclick="appendValue(4)">4</button>
+        <button onclick="appendValue(5)">5</button>
+        <button onclick="appendValue(6)">6</button>
+        <button onclick="appendValue('*')">*</button>
+      </div>
+      <div class="row">
+        <button onclick="appendValue(1)">1</button>
+        <button onclick="appendValue(2)">2</button>
+        <button onclick="appendValue(3)">3</button>
+        <button onclick="appendValue('-')">-</button>
+      </div>
+      <div class="row">
+        <button onclick="appendValue(0)">0</button>
+        <button onclick="appendValue('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="appendValue('+')">+</button>
+      </div>
+      <div class="row">
+        <button onclick="clearResult()">Clear</button>
+      </div>
+    </div>
+    <div class="tax-amount">
+      <h2> Tax Rate %</h3>
+      <input type="text" id="taxAmount" placeholder="Enter tax amount" oninput="calculateTax()" />
+      <div id="taxResult"></div>
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://www.facebook.com/cxrana" class="facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/cxrana" class="twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/ahrana/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+    
+    <div class="footer-content">
+     <p>This Custom Website-based Tax Calculator Designed by Anowar Hossain Rana, a Bangladeshi lives in Dubai.</p>
+  </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
